@@ -44,7 +44,7 @@
 			$this -> curr_message -> request_uri = $_SERVER [ 'REQUEST_URI' ];
 			$this -> curr_message -> get = print_r ( $_GET, true );
 			$this -> curr_message -> post = print_r ( $_POST, true );
-            $this -> curr_message -> session = print_r ( $_SESSION, true );
+			$this -> curr_message -> session = print_r ( $_SESSION, true );
 			
 			return $this -> curr_message;
 		}

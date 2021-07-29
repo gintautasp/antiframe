@@ -50,7 +50,7 @@
 				
 			} else $this->take_exec_error ( $lang->tr ( 'DB_INCORRECT_NAME' ), "USE `" . $name_db . "`" );	
 			
-			$this->flog_log_queries = $log_queries;
+			$this -> flag_log_queries = $log_queries;
 		}
 		
 		public function get_connection () {
@@ -64,7 +64,7 @@
 
 			if ( ! mysqli_select_db ( $this->ercl_db, $this->name_db ) ) $this->take_mysql_error ( 'USE `' . $this->name_db . '`' );
 			
-			else $this->status = 'ready';		
+			else $this -> status = 'ready';		
 		}
 		
 		public function trim_query_text ( $query_text ) {
@@ -211,6 +211,8 @@
 		}
 
 		public function qwVal ( $val ) {
+		
+			$val = toString ( $val );
         
 			$qw_val = "'" . $this -> ercl_db -> escape_string ( $val ) . "'";
 		    

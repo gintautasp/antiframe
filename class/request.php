@@ -58,11 +58,11 @@
 		
 		public function find_source ( array $map_scripts ) {
         
-		global $_log;
+			global $_syst;
 			
 			if ( $this -> path ) {
             
-				$_log  ->  x ( 'this / path', $this  ->  path );
+				$_syst -> log  ->  x ( 'this / path', $this  ->  path );
 			
 				if ( in_array ( $this -> path [0], array_keys ( $map_scripts ) ) ) { 
 				

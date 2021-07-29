@@ -57,6 +57,19 @@
 	}
 	function _have_value ( $arrVar, $testKey ) { return ( isset ( $arrVar [ $testKey ] ) && $arrVar [ $testKey ] ); }		function toFixed ( $num, $dec )  {			return number_format ( $num, $dec, '.', '' );	}
 	
+	function toString ( $val ) {
+	
+		$ret = $val;
+	
+		if ( is_bool ( $val ) ) {
+		
+			$ret = ( $val ? 'b/tiesa' : 'b/melas' );
+
+		}
+		
+		return $ret;
+	}
+	
 	function take_from_post ( $fields_values ) {
 	
 		foreach ( $fields_values  as $field => $value )  $fields_values [ $field ] = isset ( $_POST [ $field ] ) ? trim ( $_POST [ $field ] ) : $value;

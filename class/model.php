@@ -52,13 +52,13 @@
 		
 		public $show;
         
-        public $msl;
+		public $msl;
 	
 		function __construct() {
 		
 			global $db;
 			
-            parent::__construct();
+			parent::__construct();
             
 			$this -> db = $db;
 			
@@ -66,10 +66,10 @@
 			
 			$this -> show = new stdClass;
 			            
-            if  ( ! $this -> _s -> msl ) {            
-            
-                $this -> _s -> msl = new modelxSateliteLang;
-            }
+			if  ( ! $this -> _s -> msl ) {            
+			    
+				$this -> _s -> msl = new modelxSateliteLang;
+			}
 		}
 		
 		public function sql_order() {

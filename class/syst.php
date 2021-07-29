@@ -15,6 +15,7 @@
 			$this -> conf = $conf;
 			$this -> log = new log ( _cfihod ( $conf, 'dir_logs', '' ) );
 			$this -> events = new storage;
+			$this -> errors = new storage;
 			
 			set_error_handler ( array ( $this-> log, 'php_error' ) );
 		}
